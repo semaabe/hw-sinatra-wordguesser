@@ -12,11 +12,7 @@ class WordGuesserGame
   end
 
   def guess(letter)
-    if letter.nil?
-      raise ArgumentError
-    end
-
-    if letter.empty? || letter !~ /\A[a-zA-Z]\z/
+    if letter.nil? || letter.empty? || letter !~ /\A[a-zA-Z]\z/
       raise ArgumentError
     end
 
